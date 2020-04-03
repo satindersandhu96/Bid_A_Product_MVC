@@ -1,0 +1,42 @@
+﻿@model Bid_A_Product_MVC.Models.Bid
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bid</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Buyer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Buyer.BuyerRegistrationId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Seller)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Seller.SellerRegistrationNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Product)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.ProductRegistrationId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BidPrice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BidPrice)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
